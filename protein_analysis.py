@@ -23,7 +23,7 @@ class MplColorHelper:
         rgb = self.scalarMap.to_rgba(val)[:-1]
         return rgb
     
-def protein_correlation_clustering_go_count_analysis(protein_df, max_n_clusters=10):
+def protein_correlation_clustering_go_count(protein_df, max_n_clusters=10):
     """
     This function performs the following, in sequence:
         1. Compute correlation matrix of protein-protein from protein_df
