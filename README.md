@@ -1,6 +1,8 @@
 ## Usage example
 
 <code>
+  protein_correlation_clustering_go_count(df)
+  
   This function performs the following, in sequence:
         1. Compute correlation matrix of protein-protein from protein_df
         2. Hierarchical clustering of proteins using each correlation-row as feature vector 
