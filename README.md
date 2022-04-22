@@ -5,7 +5,7 @@ The function <code>protein_correlation_clustering_go_count(protein_df)</code> pe
 2. Hierarchical clustering of proteins using each correlation-row as feature vector 
    1. Ward-linkage is used to compute distances between proteins
    2. Optimal number of clusters is selected on lowest Davies Bouldin score
-3. Venn diagram of each cluster showing GO terms of respective cluster proteins
+3. Plot Venn diagram of each cluster showing GO terms of respective cluster proteins
 4. Counts number of proteins in each cluster which contain cluster-specific GO terms
 
 <code>protein_df ---> pandas.DataFrame</code>
