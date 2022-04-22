@@ -45,7 +45,7 @@ def protein_correlation_clustering_go_count(protein_df, max_n_clusters=6, correl
         | 3 | 1.4522e+09 | 2.6129e+09 | 9.3064e+08 | 3.2274e+09 | 3.6938e+09 |
         | 4 | 1.6498e+09 | 2.3794e+09 | 6.6648e+08 | 1.9489e+09 | 4.2946e+09 |
     
-    max_n_clusters ---> int between 2 and 6
+    max_n_clusters ---> int between 2 and 6 (veens with more than 6 groups are not viewable)
     correlation_method ---> str: {"pearson", "kendall", "spearman"}
     """
     record_protein_gos = {}
