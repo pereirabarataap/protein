@@ -25,5 +25,5 @@ Row values represent measures of respective protein: float
 
 
 ## Usage example
-![image](https://user-images.githubusercontent.com/15198092/164681393-4f0d50de-a9a2-41c6-b45f-188bc4478db3.png)
+![image](https://user-images.githubusercontent.com/15198092/164681567-21e9feb7-8c6e-425a-8c4e-1b42023c9b0f.png)
 
