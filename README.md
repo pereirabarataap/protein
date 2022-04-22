@@ -1,7 +1,7 @@
 ## Standalone function (for now)
 
 The function <code>protein_correlation_clustering_go_count(protein_df)</code> performs the following, in sequence:
-1. Compute correlation matrix of protein-protein from protein_df
+1. Compute protein-protein correlation matrix from protein measures in <code>protein_df</code>
 2. Hierarchical clustering of proteins using each correlation-row as feature vector 
    1. Ward-linkage is used to compute distances between proteins
    2. Optimal number of clusters is selected on lowest Davies Bouldin score
