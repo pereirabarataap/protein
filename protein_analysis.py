@@ -23,7 +23,7 @@ class MplColorHelper:
         rgb = self.scalarMap.to_rgba(val)[:-1]
         return rgb
     
-def protein_correlation_clustering_go_count(protein_df, max_n_clusters=10):
+def protein_correlation_clustering_go_count(protein_df, max_n_clusters=6, correlation_method="spearman"):
     """
     This function performs the following, in sequence:
         1. Compute correlation matrix of protein-protein from protein_df
@@ -44,6 +44,9 @@ def protein_correlation_clustering_go_count(protein_df, max_n_clusters=10):
         | 2 | 1.1927e+09 | 2.5913e+09 | 6.1717e+08 | 2.7219e+09 | 7.6858e+09 |
         | 3 | 1.4522e+09 | 2.6129e+09 | 9.3064e+08 | 3.2274e+09 | 3.6938e+09 |
         | 4 | 1.6498e+09 | 2.3794e+09 | 6.6648e+08 | 1.9489e+09 | 4.2946e+09 |
+    
+    max_n_clusters ---> int between 2 and 6
+    correlation_method ---> str: {"pearson", "kendall", "spearman"}
     """
     record_protein_gos = {}
     proteins = np.array(protein_df.columns.tolist())
@@ -54,7 +57,7 @@ def protein_correlation_clustering_go_count(protein_df, max_n_clusters=10):
         record_protein_gos[protein] = set([x_ref for x_ref in x_refs if "GO" in x_ref])
         
     scores = []
-    correlations = protein_df.corr().values
+    correlations = protein_df.corr(method=correlation_method).values
     tentative_clusters = np.linspace(2, max_n_clusters, max_n_clusters-1).astype(int)
     for n_clusters in tentative_clusters:
         ac = AC(n_clusters=n_clusters)
