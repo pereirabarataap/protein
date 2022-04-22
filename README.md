@@ -1,8 +1,4 @@
-## Usage example
-
-<style>
-table {float:left}
-</style>
+## Standalone function (for now)
 
 The function <code>protein_correlation_clustering_go_count(protein_df)</code> performs the following, in sequence:
 1. Compute correlation matrix of protein-protein from protein_df
@@ -28,5 +24,6 @@ Row values represent measures of respective protein: float
 |  4 | 1.698e+09  | 2.394e+09  | 6.6648e+08 | 1.9489e+09 | 4.2946e+09 |
 
 
+## Usage example
 ![image](https://user-images.githubusercontent.com/15198092/164678427-f07ceaff-27e1-417d-bfe4-d4e19e821fb3.png)
 
