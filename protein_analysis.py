@@ -46,6 +46,8 @@ def protein_correlation_clustering_go_count(protein_df, correlation_method="spea
         | 4 | 1.6498e+09 | 2.3794e+09 | 6.6648e+08 | 1.9489e+09 | 4.2946e+09 |
     
     correlation_method ---> str: {"pearson", "kendall", "spearman"}
+                            default: "spearman"
+                            
     """
     record_protein_gos = {}
     proteins = np.array(protein_df.columns.tolist())
