@@ -54,7 +54,8 @@ def protein_correlation_clustering_go_count(
         record_protein_gos[protein] = set([x_ref for x_ref in x_refs if "GO" in x_ref])
 
     scores = []
-
+    
+    max_n_clusters = min(max_n_clusters, len(proteins))
     correlations = protein_df.corr(method=correlation_method).values
     tentative_clusters = np.linspace(2, max_n_clusters, max_n_clusters - 1).astype(int)
     for n_clusters in tentative_clusters:
