@@ -99,6 +99,7 @@ def protein_correlation_clustering_go_count(
     axs[1].set_title("Venn diagram of unique GO terms per cluster")
 
     plt.tight_layout()
+    plt.savefig("test_A.png")
     plt.show()
 
     fig, axs = plt.subplots(
@@ -160,7 +161,7 @@ def protein_correlation_clustering_go_count(
     )
 
     plt.tight_layout()
-    plt.savefig("test.png")
+    plt.savefig("test_B.png")
     plt.show()
 
 
