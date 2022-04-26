@@ -1,0 +1,20 @@
+name: corprot
+
+channels:
+  - defaults
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - python=3.6
+  - pip
+  - pandas
+  - numpy
+  - seaborn 
+  - matplotlib
+  - scikit-learn
+  - venn
+  - biopython
+  - tqdm
+  - pip:
+    - ipywidgets
