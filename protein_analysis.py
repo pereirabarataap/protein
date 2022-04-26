@@ -18,7 +18,7 @@ class MplColorHelper:
 
 
 def protein_correlation_clustering_go_count(
-    protein_df, correlation_method="spearman", max_n_clusters=4
+    protein_df, correlation_method="spearman", max_n_clusters=6
 ):
     """
     This function performs the following, in sequence:
